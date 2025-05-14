@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Biblioteca de Enlaces</title>
+  <link rel="stylesheet" href="body {.css">
+</head>
+<body>
+  <header>
+    <h1> Study-ing </h1>
+    <p>Accede fácilmente a tus Conocimientos</p>
+  </header>
+
+  <nav>
+    <input type="text" id="busqueda" placeholder="Buscar por título o autor...">
+    <div class="buttons">
+      <button onclick="mostrarTodos()">Todos</button>
+      <button onclick="filtrarGenero('Programación')">Programción</button>
+      <button onclick="filtrarGenero('Matemática')">Matemática</button>
+      <button onclick="filtrarGenero('Cálculo')">Cálculo</button>
+    </div>
+  </nav>
+
+  <main id="lista-libros">
+    <!-- Libros insertados desde JS -->
+  </main>
+
+  <footer>
+    <p>© 2025 Study-ing Online</p>
+  </footer>
+
+  <script>
+    const libros = [
+      {
+        titulo: "Cálculo diferencial",
+        autor: "JFrancisco Javier Pérez González",
+        genero: "Cálculo",
+        enlace: "https://www.ugr.es/~fjperez/textos/calculo_diferencial_integral_func_una_var.pdf"
+      },
+      {
+        titulo: "Programación",
+        autor: "Luis Hernández Yáñez",
+        genero: "Programación",
+        enlace: "https://www.fdi.ucm.es/profesor/luis/fp/FP.pdf"
+      },
+      {
+        titulo: "INTRODUCCIÓN A LA MATEMÁTICA DISCRETA",
+        autor: "JEMMANUEL BRIAND",
+        genero: "Matemática",
+        enlace: "https://galois.azc.uam.mx/mate/LIBROS/matematicasdiscretas1.pdf"
+      }
+    ];
+
+    const contenedor = document.getElementById('lista-libros');
+    const inputBusqueda = document.getElementById('busqueda');
+
+    function mostrarLibros(lista) {
+      contenedor.innerHTML = '';
+      lista.forEach(libro => {
+        contenedor.innerHTML += `
+          <div class="libro">
+            <h3>${libro.titulo}</h3>
+            <p><strong>Autor:</strong> ${libro.autor}</p>
+            <p><strong>Género:</strong> ${libro.genero}</p>
+            <a href="${libro.enlace}" target="_blank">
+              <button class="ver-btn">📖 Ver libro</button>
+            </a>
+          </div>
+        `;
+      });
+    }
+
+    function mostrarTodos() {
+      mostrarLibros(libros);
+    }
+
+    function filtrarGenero(genero) {
+      const filtrados = libros.filter(libro => libro.genero === genero);
+      mostrarLibros(filtrados);
+    }
+
+    inputBusqueda.addEventListener('input', () => {
+      const texto = inputBusqueda.value.toLowerCase();
+      const filtrados = libros.filter(libro =>
+        libro.titulo.toLowerCase().includes(texto) || libro.autor.toLowerCase().includes(texto)
+      );
+      mostrarLibros(filtrados);
+    });
+
+    mostrarTodos();
+  </script>
+</body>
+</html>
