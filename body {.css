@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
@@ -10,6 +11,7 @@ header {
   color: white;
   padding: 1em;
   text-align: center;
+  animation: fadeInDown 1s ease;
 }
 
 nav {
@@ -29,7 +31,6 @@ nav input {
   border-radius: 4px;
 }
 
-/* Menú hamburguesa */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -44,7 +45,16 @@ nav input {
   transition: 0.3s;
 }
 
-/* Contenedor del menú desplegable */
+.menu-toggle.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active div:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .nav-menu {
   display: flex;
   gap: 10px;
@@ -52,8 +62,8 @@ nav input {
   margin-top: 1em;
 }
 
-/* Botones del filtro */
-.buttons button {
+.buttons button,
+.ver-btn {
   background-color: #cc0000;
   color: white;
   border: none;
@@ -61,25 +71,27 @@ nav input {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.buttons button:hover {
+.buttons button:hover,
+.ver-btn:hover {
   background-color: #990000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
-/* Contenido principal */
 main {
   padding: 2em;
 }
 
-/* Tarjeta de cada libro */
 .libro {
   background-color: #f0f8ff;
   border-left: 5px solid #003366;
   margin-bottom: 1em;
   padding: 1em;
   border-radius: 4px;
+  animation: slideIn 0.5s ease;
 }
 
 .libro h3 {
@@ -87,23 +99,6 @@ main {
   margin-bottom: 0.3em;
 }
 
-.ver-btn {
-  background-color: #0077cc;
-  color: white;
-  padding: 0.5em 1em;
-  border: none;
-  border-radius: 5px;
-  margin-top: 0.5em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.ver-btn:hover {
-  background-color: #005fa3;
-}
-
-/* Pie de página */
 footer {
   background-color: #003366;
   color: white;
@@ -112,7 +107,29 @@ footer {
   margin-top: 2em;
 }
 
-/* Responsive */
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   .buttons {
     display: none;
@@ -126,7 +143,6 @@ footer {
     display: none;
     flex-direction: column;
     width: 100%;
-    margin-top: 1em;
   }
 
   .nav-menu.active {
