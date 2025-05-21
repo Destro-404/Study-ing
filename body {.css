@@ -1,4 +1,5 @@
 
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
@@ -7,11 +8,16 @@ body {
 }
 
 header {
-  background-color: #003366;
+  background-image: url('fondo.png'); 
+  background-size: cover;               
+  background-position: center;          
+  height: 300px;                        
+  width: 100%;                          
   color: white;
   padding: 1em;
   text-align: center;
   animation: fadeInDown 1s ease;
+  
 }
 
 .logo {
