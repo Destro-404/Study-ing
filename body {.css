@@ -1,8 +1,72 @@
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.gifs-container a {
+  display: inline-block;
+}
+
+
+.footer-img {
+  max-width: 50px; /* ajusta según el tamaño deseado */
+  height: auto;
+  cursor: pointer;
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: center; /* Centra todo horizontalmente */
+  align-items: center;     /* Alinea verticalmente */
+  gap: 20px;               /* Espacio entre búsqueda y botones */
+  background-color: #003f87; /* Azul */
+  padding: 20px;
+  flex-wrap: wrap; /* Para que se acomode en pantallas pequeñas */
+}
+
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-buttons button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+
+
+.gifs-container {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.gif {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -51,7 +115,7 @@ header {
   margin: 0.5em 0 0 0;
 }
 
-/* ---------- NAV ---------- */
+
 nav {
   background-color: #004080;
   padding: 1em;
@@ -69,7 +133,7 @@ nav input {
   border-radius: 4px;
 }
 
-/* ---------- MENU HAMBURGUESA ---------- */
+
 .menu-toggle {
   display: none;
   flex-direction: column;
