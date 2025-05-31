@@ -1,112 +1,84 @@
-/* Imagen de fondo */
+/* Fondo general con imagen */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   background: url('fondologin.png') no-repeat center center fixed;
   background-size: cover;
+}
+
+/* Contenedor del formulario con efecto de desenfoque */
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.logo {
-  height: 150px;
-  position: absolute;
-  top: 20px;
-  transition: transform 0.3s ease;
-}
-
-.btn {
-  display: block;
-  text-align: center;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #3498db;
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #2980b9;
-  transform: scale(1.02);
-}
-
-.btn:active {
-  background-color: #1c5980;
-}
-
-/* Contenedor principal */
-.container {
-  backdrop-filter: blur(6px);
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
+.formulario {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  text-align: center;
   width: 300px;
 }
 
-/* Formulario */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.formulario h2 {
+  margin-bottom: 20px;
+  color: #000;
 }
 
-.form h2 {
-  color: rgb(255, 255, 255);
-  text-align: center;
-}
-
-.form input {
-  padding: 0.8rem;
+/* Estilos para los inputs */
+.formulario input[type="text"],
+.formulario input[type="password"],
+.formulario input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
   border: none;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.493);
-  color: #000000;
-  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
+  font-size: 16px;
   outline: none;
-  transition: background-color 0.3s ease;
 }
 
-.form input::placeholder {
-  color: #ddd;
-}
-
-.form button {
-  padding: 0.8rem;
+/* Estilo para el botón */
+.formulario button {
+  width: 100%;
+  padding: 10px;
   border: none;
   border-radius: 8px;
-  background-color: #3498db;
+  background-color: #007BFF;
   color: white;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s;
 }
 
-.form button:hover {
-  background-color: #2980b9;
-  transform: scale(1.02);
+.formulario button:hover {
+  background-color: #0056b3;
 }
 
-.form button:active {
-  background-color: #1c5980;
+.formulario p {
+  margin-top: 15px;
+  color: #000;
 }
 
-.form p {
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: 0.9rem;
-}
-.form a {
-  color: #ffffff;
+.formulario a {
+  color: blue;
   text-decoration: none;
 }
-
-.form a:hover {
+.formulario a:hover {
   text-decoration: underline;
+}
+
+/* Logo opcional */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
 }
