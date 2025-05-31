@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('pagoo.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+}
+
+.formulario-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formulario {
+  background: rgba(255, 255, 255, 0.2); /* Más transparente */
+  backdrop-filter: blur(10px); /* Difuminado */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde tenue */
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 14px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.formulario input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.formulario button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transform: scale(1.02);
+}

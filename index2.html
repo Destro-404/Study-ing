@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study-ing</title>
+  <link rel="stylesheet" href="body {.css">
+</head>
+<body>
+
+  
+
+  <header>
+     <a href="https://www.canva.com/design/DAGnp6rSSxo/lvesdh5CH5ZVSF2S6iURoA/edit" target="_blank">
+    <img src="logo.png" alt="Logo Study-ing" class="logo">
+  </a>
+  </header>
+  <nav>
+
+    <div class="search-container">
+    <input type="text" id="busqueda" placeholder="Buscar por título o autor...">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      
+    </div>
+    <div class="nav-menu buttons" id="navMenu">
+      <button onclick="mostrarTodos()">Todos</button>
+      <button onclick="filtrarGenero('Programación')">Programación</button>
+      <button onclick="filtrarGenero('Cálculo')">Cálculo</button>
+      <button onclick="filtrarGenero('Derecho Informático')">Derecho Informático</button>
+      <button onclick="filtrarGenero('Algoritmos')">Algoritmos</button>
+      <button onclick="filtrarGenero('Algebra Lineal')">Algebra Lineal</button>
+    </div>
+  </nav>
+
+  <main id="lista-libros"></main>
+  <footer>
+    <div class="footer-container">
+  <a href="https://t.me/+1DVHTlgRRoQzY2Fh" target="_blank">
+    <img src="Telegram.png" alt="Imagen footer" class="footer-img">
+  </a>
+  <script>
+[
+  {"titulo": "Movimiento rectilíneo, volúmenes de solidos", "autor": "Sebastián", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1zOA1ZB6zjJBCJShltLVg9pwBDyc8P1VF/view"},
+  {"titulo": "Pasos para resolver Derivadas", "autor": "Ashlee", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1SAhMzPM2uiNh3eoxw8QJT4JGkvnj9cbR/view?usp=drivesdk"},
+  {"titulo": "Ejemplos de Limites", "autor": "Ashlee", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1PxTCycCTyPR2ROW61JZojH66s2FSj49h/view?usp=drivesdk"},
+  {"titulo": "Como encontrar dy/dx", "autor": "Ashlee", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1yNu6B6YDIZeMCXTO0ec3WQkWaBBy7-df/view?usp=drivesdk"},
+  {"titulo": "Método de rebanadas", "autor": "Branlin", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1-Ufgc89pRxgWXYIubG3TW1RbKfbUwCS0/view?usp=drivesdk"},
+  {"titulo": "Integrales", "autor": "Sebastián", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/199JC422LwfHENMRkjf5G6SYdK4hRqPho/view?usp=drivesdk"},
+  {"titulo": "proceso para resolver ejercicios de limites", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1_FGgCGeONNdvumypE92J-jlpqtVgmrqP/view"},
+  {"titulo": "proceso para resolver ejercicios de funciones", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1y2RdpCQ51n-nsiIZrJi18r-v1FSw9spD/view"},
+  {"titulo": "proceso para resolver ejercicios de límites con funciones trigonométricas", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1W5t0uCQcXMd6QPKpitc1oaqKuDyVFsdJ/view?usp=drivesdk"},
+  {"titulo": "proceso para resolver ejercicios de limites infinitos", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1jxqNwz4bhcUnMuSt3juK1gzr5uO72o27/view?usp=drivesdk"},
+  {"titulo": "proceso para resolver ejercicios de funciones con pendientes", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/15I1-ASVJsxkH7Ud-V1TGskUizdY-XE7d/view?usp=drivesdk"},
+  {"titulo": "Uso de punteros en C", "autor": "Mynor", "genero": "Programación", "enlace": "https://drive.google.com/file/d/10tQ5iUE2nVjGoZq5Lqq1ZRwedcYwkcqF/view?usp=drivesdk"},
+  {"titulo": "Ejercicios, Estructuras y Apuntadores", "autor": "Justin", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1PazxSGjyvPLJLonVVAavNqOql5_13UmR/view?usp=sharing"},
+  {"titulo": "Estructura de calculadora en Python", "autor": "Mynor", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1aidvTvJhpX6hY9WHnkO7VpCNhNe17wIn/view?usp=drivesd"},
+  {"titulo": "Ejemplos de Arboles Binarios", "autor": "Ashlee", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1yUeYbvn-8GL19p7khAscD81um4HePG8o/view"},
+  {"titulo": "Instalación de Python", "autor": "Emely", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1yUeYbvn8GL19p7khAscD81um4HePG8o/view?usp=drivesdk"},
+  {"titulo": "Calculadora de gatos de transporte en C", "autor": "Mynor", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1NH3Y5PUSiJu1uAzQ04Zt_n2dmFBtdXdBApJUsoQQHwY/view?usp=drivesdk"},
+  {"titulo": "Recolección de datos", "autor": "Emely", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1olTyD657UMdFSI24ziVwUfswOxQWyE6-/view?usp=drivesdk"},
+  {"titulo": "Polimorfismo", "autor": "Justin", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1-rwJkw1xpZr4Ao5xrXd6aIV3_27v80Ri/view?usp=drivesdk"},
+  {"titulo": "Orientación a objetos", "autor": "Justin", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1Utf3miyKBzRQGw9MyeBc1qYp390Jzblt/view?usp=drivesdk"},
+  {"titulo": "Vectores", "autor": "Sebastián", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1qVI6qjPZabWmbPgV4ooINlc2Zf4Whe3t/view?usp=drivesdk"},
+  {"titulo": "Sistema de una tienda", "autor": "Sebastián", "genero": "Programación", "enlace": "https://drive.google.com/file/d/11Cmx0qr0YAZx_g6KJ5UY2fxnMpxkZ94z/view?usp=drivesdk"},
+  {"titulo": "La distribución geométrica y la distribución hipergeométrica", "autor": "Branlin", "genero": "Estadística", "enlace": "https://drive.google.com/file/d/1-QEkGuN_MFBHFWcx-A2qoAbp6uFEE5cR/view?usp=drivesdk"},
+  {"titulo": "Pasos para resolver ejercicios de probabilidad", "autor": "Branlin", "genero": "Estadística", "enlace": "https://drive.google.com/file/d/1-Uf7B5SRcMjgXtbnk_NV3CibJ5QczYDq/view"},
+  {"titulo": "proceso para resolver ejercicios de media, mediana, monda", "autor": "Branlin", "genero": "Estadística", "enlace": "https://drive.google.com/file/d/1-XrhpWGEjW7TkL_mY4YXc1XL9NeJJsqj/view?usp=drivesdk"},
+  {"titulo": "Calculadora de probabilidades", "autor": "Emely", "genero": "Estadística", "enlace": "https://drive.google.com/file/d/1ZQNfGBZMaapJRtpVcx9MpOW4-zyh7ttO/view?usp=drivesdk"},
+  {"titulo": "Relación entre derecho y la informática", "autor": "Mynor", "genero": "Derecho Informático", "enlace": "https://drive.google.com/file/d/1bRy-prIOpNlAE9q_G--phkWcFqbEmYip/view?usp=drivesdk"},
+  {"titulo": "Código CODELOCKS (mediciones)", "autor": "Emely", "genero": "Algoritmos", "enlace": "https://drive.google.com/file/d/1vP6XDj4uyU9mz-hikLb-GUvK-g0t7Brs/view?usp=drivesdk"},
+  {"titulo": "Códigos", "autor": "Justin", "genero": "Algoritmos", "enlace": "https://docs.google.com/document/d/1RrEOVLI8bgU5Mqtep9Mhv9sm45o2BVJK/edit?usp=sharing&ouid=109333682535513851394&rtpof=true&sd=true"},
+  {"titulo": "Matrices", "autor": "Justin", "genero": "Algebra Lineal", "enlace": "https://drive.google.com/file/d/1LkkALUD8eiNmfpMWyUAIDrZCY-dLFMpZ/view?usp=drivesdk"}
+]
+const libros =
+[
+  {"titulo": "Movimiento rectilíneo, volúmenes de solidos", "autor": "Sebastián", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1zOA1ZB6zjJBCJShltLVg9pwBDyc8P1VF/view"},
+  {"titulo": "Pasos para resolver Derivadas", "autor": "Ashlee", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1SAhMzPM2uiNh3eoxw8QJT4JGkvnj9cbR/view?usp=drivesdk"},
+  {"titulo": "Ejemplos de Limites", "autor": "Ashlee", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1PxTCycCTyPR2ROW61JZojH66s2FSj49h/view?usp=drivesdk"},
+  {"titulo": "Como encontrar dy/dx", "autor": "Ashlee", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1yNu6B6YDIZeMCXTO0ec3WQkWaBBy7-df/view?usp=drivesdk"},
+  {"titulo": "Método de rebanadas", "autor": "Branlin", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1-Ufgc89pRxgWXYIubG3TW1RbKfbUwCS0/view?usp=drivesdk"},
+  {"titulo": "Integrales", "autor": "Sebastián", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/199JC422LwfHENMRkjf5G6SYdK4hRqPho/view?usp=drivesdk"},
+  {"titulo": "proceso para resolver ejercicios de limites", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1_FGgCGeONNdvumypE92J-jlpqtVgmrqP/view"},
+  {"titulo": "proceso para resolver ejercicios de funciones", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1y2RdpCQ51n-nsiIZrJi18r-v1FSw9spD/view"},
+  {"titulo": "proceso para resolver ejercicios de límites con funciones trigonométricas", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1W5t0uCQcXMd6QPKpitc1oaqKuDyVFsdJ/view?usp=drivesdk"},
+  {"titulo": "proceso para resolver ejercicios de limites infinitos", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/1jxqNwz4bhcUnMuSt3juK1gzr5uO72o27/view?usp=drivesdk"},
+  {"titulo": "proceso para resolver ejercicios de funciones con pendientes", "autor": "Ricardo", "genero": "Cálculo", "enlace": "https://drive.google.com/file/d/15I1-ASVJsxkH7Ud-V1TGskUizdY-XE7d/view?usp=drivesdk"},
+  {"titulo": "Uso de punteros en C", "autor": "Mynor", "genero": "Programación", "enlace": "https://drive.google.com/file/d/10tQ5iUE2nVjGoZq5Lqq1ZRwedcYwkcqF/view?usp=drivesdk"},
+  {"titulo": "Ejercicios, Estructuras y Apuntadores", "autor": "Justin", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1PazxSGjyvPLJLonVVAavNqOql5_13UmR/view?usp=sharing"},
+  {"titulo": "Estructura de calculadora en Python", "autor": "Mynor", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1aidvTvJhpX6hY9WHnkO7VpCNhNe17wIn/view?usp=drivesd"},
+  {"titulo": "Ejemplos de Arboles Binarios", "autor": "Ashlee", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1yUeYbvn-8GL19p7khAscD81um4HePG8o/view"},
+  {"titulo": "Instalación de Python", "autor": "Emely", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1yUeYbvn8GL19p7khAscD81um4HePG8o/view?usp=drivesdk"},
+  {"titulo": "Calculadora de gatos de transporte en C", "autor": "Mynor", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1NH3Y5PUSiJu1uAzQ04Zt_n2dmFBtdXdBApJUsoQQHwY/view?usp=drivesdk"},
+  {"titulo": "Recolección de datos", "autor": "Emely", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1olTyD657UMdFSI24ziVwUfswOxQWyE6-/view?usp=drivesdk"},
+  {"titulo": "Polimorfismo", "autor": "Justin", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1-rwJkw1xpZr4Ao5xrXd6aIV3_27v80Ri/view?usp=drivesdk"},
+  {"titulo": "Orientación a objetos", "autor": "Justin", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1Utf3miyKBzRQGw9MyeBc1qYp390Jzblt/view?usp=drivesdk"},
+  {"titulo": "Vectores", "autor": "Sebastián", "genero": "Programación", "enlace": "https://drive.google.com/file/d/1qVI6qjPZabWmbPgV4ooINlc2Zf4Whe3t/view?usp=drivesdk"},
+  {"titulo": "Sistema de una tienda", "autor": "Sebastián", "genero": "Programación", "enlace": "https://drive.google.com/file/d/11Cmx0qr0YAZx_g6KJ5UY2fxnMpxkZ94z/view?usp=drivesdk"},
+  {"titulo": "La distribución geométrica y la distribución hipergeométrica", "autor": "Branlin", "genero": "Estadística", "enlace": "https://drive.google.com/file/d/1-QEkGuN_MFBHFWcx-A2qoAbp6uFEE5cR/view?usp=drivesdk"},
+  {"titulo": "Pasos para resolver ejercicios de probabilidad", "autor": "Branlin", "genero": "Estadística", "enlace": "https://drive.google.com/file/d/1-Uf7B5SRcMjgXtbnk_NV3CibJ5QczYDq/view"},
+  {"titulo": "proceso para resolver ejercicios de media, mediana, monda", "autor": "Branlin", "genero": "Estadística", "enlace": "https://drive.google.com/file/d/1-XrhpWGEjW7TkL_mY4YXc1XL9NeJJsqj/view?usp=drivesdk"},
+  {"titulo": "Calculadora de probabilidades", "autor": "Emely", "genero": "Estadística", "enlace": "https://drive.google.com/file/d/1ZQNfGBZMaapJRtpVcx9MpOW4-zyh7ttO/view?usp=drivesdk"},
+  {"titulo": "Relación entre derecho y la informática", "autor": "Mynor", "genero": "Derecho Informático", "enlace": "https://drive.google.com/file/d/1bRy-prIOpNlAE9q_G--phkWcFqbEmYip/view?usp=drivesdk"},
+  {"titulo": "Código CODELOCKS (mediciones)", "autor": "Emely", "genero": "Algoritmos", "enlace": "https://drive.google.com/file/d/1vP6XDj4uyU9mz-hikLb-GUvK-g0t7Brs/view?usp=drivesdk"},
+  {"titulo": "Códigos", "autor": "Justin", "genero": "Algoritmos", "enlace": "https://docs.google.com/document/d/1RrEOVLI8bgU5Mqtep9Mhv9sm45o2BVJK/edit?usp=sharing&ouid=109333682535513851394&rtpof=true&sd=true"},
+  {"titulo": "Matrices", "autor": "Justin", "genero": "Algebra Lineal", "enlace": "https://drive.google.com/file/d/1LkkALUD8eiNmfpMWyUAIDrZCY-dLFMpZ/view?usp=drivesdk"}
+]
+    const contenedor = document.getElementById('lista-libros');
+    const inputBusqueda = document.getElementById('busqueda');
+
+    function mostrarLibros(lista) {
+      contenedor.innerHTML = '';
+      lista.forEach(libro => {
+        contenedor.innerHTML += `
+          <div class="libro">
+            <h3>${libro.titulo}</h3>
+            <p><strong>Autor:</strong> ${libro.autor}</p>
+            <p><strong>Género:</strong> ${libro.genero}</p>
+            <a href="${libro.enlace}" target="_blank">
+              <button class="ver-btn">📖 Ver recurso</button>
+            </a>
+          </div>
+        `;
+      });
+    }
+
+    function mostrarTodos() {
+      mostrarLibros(libros);
+    }
+
+    function filtrarGenero(genero) {
+      const filtrados = libros.filter(libro => libro.genero === genero);
+      mostrarLibros(filtrados);
+    }
+
+    inputBusqueda.addEventListener('input', () => {
+      const texto = inputBusqueda.value.toLowerCase();
+      const filtrados = libros.filter(libro =>
+        libro.titulo.toLowerCase().includes(texto) || libro.autor.toLowerCase().includes(texto)
+      );
+      mostrarLibros(filtrados);
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+      document.querySelector('.menu-toggle').classList.toggle('active');
+    }
+
+    mostrarTodos();
+  </script>
+</body>
+</html>

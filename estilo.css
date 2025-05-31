@@ -1,0 +1,112 @@
+/* Imagen de fondo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('fondologin.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  height: 150px;
+  position: absolute;
+  top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.02);
+}
+
+.btn:active {
+  background-color: #1c5980;
+}
+
+/* Contenedor principal */
+.container {
+  backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  width: 300px;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form h2 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.form input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.493);
+  color: #000000;
+  font-size: 1rem;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.form input::placeholder {
+  color: #ddd;
+}
+
+.form button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+  background-color: #2980b9;
+  transform: scale(1.02);
+}
+
+.form button:active {
+  background-color: #1c5980;
+}
+
+.form p {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+}
+.form a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
