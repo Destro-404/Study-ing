@@ -9,13 +9,41 @@
 <body>
   <img src="logo.png" alt="Logo Study-ing" class="logo">
   <div class="container">
-    <form class="form">
+    <form id="loginForm" class="formulario">
       <h2>Iniciar Sesión</h2>
-      <input type="text" placeholder="Usuario" required />
-      <input type="password" placeholder="Contraseña" required />
-      <a href="pagprem.html" class="btn">Entrar</a>
+      <input type="text" id="usuario" placeholder="Usuario" required />
+      <input type="password" id="contrasena" placeholder="Contraseña" required />
+      <button type="submit">Entrar</button>
       <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
     </form>
   </div>
+
+  <script>
+    const formulario = document.getElementById('loginForm');
+
+    // Lista de usuarios permitidos
+    const usuarios = [
+      { usuario: "Luis Enrique", contrasena: "Coco" },
+      { usuario: "Admin", contrasena: "1234" },
+      { usuario: "Admin2", contrasena: "ABCD" }
+    ];
+
+    formulario.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const userInput = document.getElementById('usuario').value;
+      const passInput = document.getElementById('contrasena').value;
+
+      const usuarioValido = usuarios.find(user =>
+        user.usuario === userInput && user.contrasena === passInput
+      );
+
+      if (usuarioValido) {
+        window.location.href = "pagprem.html"; // Redirección si es válido
+      } else {
+        alert("Usuario o contraseña incorrectos.");
+      }
+    });
+  </script>
 </body>
 </html>
